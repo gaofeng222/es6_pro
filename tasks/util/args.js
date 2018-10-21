@@ -4,17 +4,17 @@ const args = yargs
 
 .option('production',{
     boolean : true,
-    default : fasle,
+    default : false,
     describe : 'min all scripts'
 
 }).option('watch',{
     boolean: true,
-    default : fasle,
+    default : false,
     describe: "watch all files",
 
 }).option('verbose',{
         boolean: true,
-        default : fasle,
+        default : false,
         describe: "log",
 
 }).option('sourcemap',{
@@ -24,7 +24,9 @@ const args = yargs
     string : true,
     default : 8080,
     describe: "server port"
-}).argv()
+}).argv;
+
+export default args
 
 
 
